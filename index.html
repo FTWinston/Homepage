@@ -1,17 +1,18 @@
-
 <html>
-  <head>
-    <title>FTWinston.com</title>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119909636-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-119909636-2');
-    </script>
-  </head>
-  <body>
-    <pre style="text-align:center;">
+    <head>
+        <title>FTWinston.com</title>
+        <link rel="stylesheet" href="style.css">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119909636-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-119909636-2');
+        </script>
+    </head>
+    <body>
+<div class="header">
+    <pre class="header__image">
  d%%SSP YSSS~S%SSSSSP  .SS     SS.  .SS  .SS~YS%%b    d%%SP  YSSS~S%SSSSSP   d%%SP~YS%%b   .SS~YS%%b   
 d%S'         S%S       S%S     S%S  S%S  S%S   `S%b  d%S'         S%S       d%S'     `S%b  S%S   `S%b  
 S%S          S%S       S%S     S%S  S%S  S%S    S%S  S%|          S%S       S%S       S%S  S%S    S%S  
@@ -26,15 +27,79 @@ S*S          S*S       SSS~SSS~S*S  S*S  S*S    SSS  YSS'         S*S         YS
 SP           SP                     SP   SP                       SP                       SP          
 Y            Y                      Y    Y                        Y                        Y           
     </pre>
+    <div class="header__text">
+        Personal projects and stuff
+    </div>
+</div>
 
-There's nothing to see here.
+<div class="projectList">
+    <div class="project">
+        <div class="project__image">
+            
+        </div>
+        <div class="project__body">
+            <div class="project__name">About</div>
+            <div class="project__desc">
+                <p>A few of my personal projects here. Mostly React / Typescript / .NET Core stuff.</p>
+                <p>This domain is hosting them anyway, so something has to go on the root level!</p>
+            </div>
+        </div>
+    </div>
 
-You probably want one of these:
-<ul>
-	<li><a href="https://countdown.ftwinston.com">Countdown</a> - Customisable implementation of the classic game show.</li>
-	<li><a href="https://text.ftwinston.com">Text transformer</a> - Of use if you're transforming text. I use it at work a lot.</li>
-	<li><a href="https://dungeon.ftwinston.com">Dungeon generator</a> - Random map generator for D&amp;D-style dungeons. Not entirely complete.</li>
-	<li>Loads of other unfinished things. <a href="https://github.com/FTWinston">Go look on Github.</a></li>
-</ul>
+    <div class="project">
+        <div class="project__image">
+
+        </div>
+        <div class="project__body">
+            <a class="project__name" href="https://countdown.ftwinston.com">Countdown</a>
+            <div class="project__desc">A customisable implementation of the games from the classic UK TV game show.</div>
+        </div>
+        <a class="project__codelink" href="https://github.com/FTWinston/Countdown">View code</a>
+    </div>
+
+    <div class="project">
+        <div class="project__image">
+            
+        </div>
+        <div class="project__body">
+            <a class="project__name" href="https://interrogation.ftwinston.com">Robot Interrogation</a>
+            <div class="project__desc">Web app for playing <a href="https://kickstarter.com/projects/tommy-maranges/inhuman-conditions-a-game-of-cops-and-robots">Inhuman Conditions</a>.</div>
+        </div>
+        <a class="project__codelink" href="https://github.com/FTWinston/RobotInterrogation">View code</a>
+    </div>
+
+    <div class="project">
+        <div class="project__image">
+            
+        </div>
+        <div class="project__body">
+            <a class="project__name" href="https://dungeon.ftwinston.com">Dungeon Generator</a>
+            <div class="project__desc">A random map generator for D&amp;D-style dungeons. Mostly, but not entirely (in)complete.</div>
+        </div>
+        <a class="project__codelink" href="https://github.com/FTWinston/RandomDungeon">View code</a>
+    </div>
+
+    <div class="project">
+        <div class="project__image">
+            
+        </div>
+        <div class="project__body">
+            <a class="project__name" href="https://text.ftwinston.com">Text Transformer</a>
+            <div class="project__desc">Of use if you're manipulating a lot of text. I use it at work a lot. YMMV.</div>
+        </div>
+        <a class="project__codelink" href="https://github.com/FTWinston/TextTransformer">View code</a>
+    </div>
+
+    <div class="project">
+        <div class="project__image">
+            
+        </div>
+        <div class="project__body">
+            <a class="project__name" href="https://github.com/FTWinston">Github profile</a>
+            <div class="project__desc">Trawl through my myriad other, mostly unfinished repositories.</div>
+        </div>
+    </div>
+</div>
+
   </body>
 </html>

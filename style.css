@@ -1,0 +1,95 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #d0d0d0;
+    color: #303030;
+    background-image: linear-gradient(to bottom right, #d0d0d0, #f0f0f0);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+p + p {
+    margin-top: 1em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    color: black;
+}
+
+.header__image {
+    margin-bottom: 0;
+}
+
+.header__blurb {
+    font-size: 1.2em;
+}
+
+.projectList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    align-content: space-around;
+    margin: 0.5em;
+}
+
+.project {
+    position: relative;
+    margin: 0.5em;
+    border: solid #999 0.2em;
+    background-color: #999;
+    width: 20em;
+    min-height: 10em;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 0.5em;
+    border-top-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    overflow: hidden;
+}
+
+.project__image {
+    height: 5em;
+}
+
+.project__body {
+    background-color: white;
+    padding: 0.25rem 1.25rem;
+    flex-grow: 1;
+}
+
+.project__name {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333;
+}
+
+a.project__name {
+    color: black;
+}
+
+.project__codelink {
+    position: absolute;
+    top: 0.25em;
+    right: 0.5em;
+}
