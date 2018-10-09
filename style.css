@@ -3,6 +3,7 @@ body {
     background-color: #d0d0d0;
     color: #303030;
     background-image: linear-gradient(to bottom right, #d0d0d0, #f0f0f0);
+    margin: 0;
 }
 
 * {
@@ -98,7 +99,7 @@ a:hover {
     animation-timing-function: step-start, linear;
 }
 
-@media only screen and (max-width: 750px) {
+@media (max-width: 750px) {
     .header__bigtext {
         font-size: calc(100vw / 63);
     }
@@ -107,6 +108,7 @@ a:hover {
 .header__strapline {
     font-size: 1.2em;
     color: #666;
+    text-align: center;
 }
 
 @keyframes flash {
@@ -129,6 +131,7 @@ a:hover {
     align-items: stretch;
     align-content: space-around;
     margin: 0.5em;
+    min-height: 50vh;
 }
 
 .project {
@@ -136,8 +139,8 @@ a:hover {
     margin: 0.5em;
     border: solid #999 0.2em;
     background-color: #999;
-    width: 20em;
-    min-height: 10em;
+    width: calc(100vw - 1em);
+    min-height: 11em;
 
     display: flex;
     flex-direction: column;
@@ -146,6 +149,42 @@ a:hover {
     border-top-left-radius: 2em;
     border-bottom-right-radius: 2em;
     overflow: hidden;
+}
+
+@media (min-width: 550px) {
+    .project {
+        width: calc(50vw - 2em);
+    }
+}
+
+@media (min-width: 700px) {
+    .project {
+        width: 45vw;
+    }
+}
+
+@media (min-width: 850px) {
+    .project {
+        width: 24em;
+    }
+}
+
+@media (min-width: 1100px) {
+    .project {
+        width: calc(33.33vw - 3em);
+    }
+}
+
+@media (min-width: 1450px) {
+    .project {
+        width: 26.75em;
+    }
+}
+
+@media (min-width: 1700px) {
+    .project {
+        width: calc(25vw - 4em);
+    }
 }
 
 .project__image {
