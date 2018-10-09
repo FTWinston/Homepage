@@ -3,6 +3,7 @@ body {
     background-color: #d0d0d0;
     color: #303030;
     background-image: linear-gradient(to bottom right, #d0d0d0, #f0f0f0);
+    width: 100vw;
 }
 
 * {
