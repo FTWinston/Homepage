@@ -42,7 +42,7 @@ a:hover {
 
 @media only screen and (max-width: 750px) {
     .header__image {
-        font-size: calc(100vw / 58);
+        font-size: calc(100vw / 62);
     }
 } 
 
