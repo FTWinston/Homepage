@@ -34,21 +34,93 @@ a:hover {
     color: black;
 }
 
-.header__image {
-    margin-bottom: 0;
+
+
+.header__bigtext {
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.header__letter {
     white-space: pre;
     font-family: monospace;
+    animation-name: flash;
+    animation-duration: 0.25s;
+    animation-timing-function: step-start;
+}
+
+.header__letter + .header__letter {
+    margin-left: 1em;
+}
+
+.header__letter--1 {
+    animation-delay: 1s, 3s;
+}
+
+.header__letter--2 {
+    animation-delay: 1.25s, 3s;
+}
+
+.header__letter--3 {
+    animation-delay: 1.5s, 3s;
+}
+
+.header__letter--4 {
+    animation-delay: 1.75s;
+}
+
+.header__letter--5 {
+    animation-delay: 2s;
+}
+
+.header__letter--6 {
+    animation-delay: 2.25s;
+}
+
+.header__letter--7 {
+    animation-delay: 2.5s;
+}
+
+.header__letter--8 {
+    animation-delay: 2.75s;
+}
+
+.header__letter--9 {
+    animation-delay: 3s;
+}
+
+.header__letter--acronym {
+    animation-name: flash, flash;
+    animation-duration: 0.5s, 1.5s;
+    animation-fill-mode: none, forwards;
+    animation-timing-function: step-start, linear;
 }
 
 @media only screen and (max-width: 750px) {
-    .header__image {
-        font-size: calc(100vw / 62);
+    .header__bigtext {
+        font-size: calc(100vw / 63);
     }
 } 
 
-.header__blurb {
+.header__strapline {
     font-size: 1.2em;
+    color: #666;
 }
+
+@keyframes flash {
+    from {
+        color: black;
+        font-weight: bold;
+    }
+    to {
+        color: #008888;
+        font-weight: bold;
+    }
+}
+
+
 
 .projectList {
     display: flex;
