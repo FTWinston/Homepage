@@ -36,11 +36,13 @@ a:hover {
 
 .header__image {
     margin-bottom: 0;
+    white-space: pre;
+    font-family: monospace;
 }
 
 @media only screen and (max-width: 750px) {
     .header__image {
-        font-size: calc(100vw / 64);
+        font-size: calc(100vw / 58);
     }
 } 
 
