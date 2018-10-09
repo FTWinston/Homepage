@@ -40,7 +40,7 @@ a:hover {
 
 @media only screen and (max-width: 750px) {
     .header__image {
-        font-size: calc(100vw / 59);
+        font-size: calc(100vw / 64);
     }
 } 
 
