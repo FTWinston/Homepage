@@ -3,7 +3,6 @@ body {
     background-color: #d0d0d0;
     color: #303030;
     background-image: linear-gradient(to bottom right, #d0d0d0, #f0f0f0);
-    width: 100vw;
 }
 
 * {
@@ -38,6 +37,12 @@ a:hover {
 .header__image {
     margin-bottom: 0;
 }
+
+@media only screen and (max-width: 750px) {
+    .header__image {
+        font-size: calc(100vw / 59);
+    }
+} 
 
 .header__blurb {
     font-size: 1.2em;
