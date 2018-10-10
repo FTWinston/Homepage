@@ -70,6 +70,7 @@ a:hover {
 
 .header__letter--4 {
     animation-delay: 1.75s;
+    padding: 0 0.5em;
 }
 
 .header__letter--5 {
@@ -101,7 +102,7 @@ a:hover {
 
 @media (max-width: 750px) {
     .header__bigtext {
-        font-size: calc(100vw / 63);
+        font-size: calc(100vw / 64);
     }
 } 
 
