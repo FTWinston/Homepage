@@ -95,7 +95,7 @@ a:hover {
 
 .header__letter--acronym {
     animation-name: flash, flash;
-    animation-duration: 0.5s, 1.5s;
+    animation-duration: 0.25s, 1.5s;
     animation-fill-mode: none, forwards;
     animation-timing-function: step-start, linear;
 }
