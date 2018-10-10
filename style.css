@@ -137,7 +137,7 @@ a:hover {
 .project {
     position: relative;
     margin: 0.5em;
-    border: solid #999 0.2em;
+    border: solid #999 0.2rem;
     background-color: #999;
     width: calc(100vw - 1em);
     min-height: 11em;
@@ -188,7 +188,14 @@ a:hover {
 }
 
 .project__image {
-    height: 5em;
+    height: 5rem;
+    opacity: 0.25;
+    transition: opacity 0.25s;
+    border-bottom: solid #999 0.2rem;
+}
+
+.project:hover .project__image, .project:focus-within .project__image {
+    opacity: unset;
 }
 
 .project__body {
@@ -210,5 +217,41 @@ a.project__name {
 .project__codelink {
     position: absolute;
     top: 0.25em;
-    right: 0.5em;
+    right: 0.25em;
+    transition: background-color 0.25s;
+    padding: 0.15em 0.4em;
+    border-radius: 0.25em;
+}
+
+.project:hover .project__codelink, .project:focus-within .project__codelink {
+    background-color: #e0e0e0;
+}
+
+
+
+.project--about .project__image,
+.project--github .project__image,
+.project--transformer .project__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    font-size: 2.5em;
+}
+
+.project--countdown .project__image {
+    background-image: url('projects/countdown.jpg');
+    background-position: center bottom;
+}
+
+.project--interrogation .project__image {
+    background-image: url('projects/interrogation.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.project--dungeon .project__image {
+    background-image: url('projects/dungeon.png');
+    background-size: cover;
+    background-position: right center;
 }
