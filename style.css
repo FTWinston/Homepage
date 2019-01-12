@@ -245,6 +245,11 @@ a.project__name {
     background-position: center bottom;
 }
 
+.project--thumbophone .project__image {
+    background-image: url('projects/thumbophone.png');
+    background-position: center;
+}
+
 .project--interrogation .project__image {
     background-image: url('projects/interrogation.jpg');
     background-size: cover;
