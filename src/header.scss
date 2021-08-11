@@ -1,0 +1,50 @@
+
+.header, .header__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    font-size: min(45vh, 12vw);
+    width: 100vw;
+    height: 90vh;
+}
+
+.header__letter {
+    background: transparent;
+    border: none;
+    font-size: 1em;
+    font-family: inherit;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    text-decoration: underline;
+    color: inherit;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 0.07em;
+
+    transition: all 0.125s ease-in-out;
+
+    &:active {
+        top: 0.1em;
+    }
+
+    &:focus-visible {
+        outline: none;
+        color: red;
+    }
+}
+
+.header__letter--active {
+    text-decoration-color: var(--trans-text-color);
+}
+
+.header__letter--i:hover, .header__letter--i:active {
+    color: var(--bg-color);
+    text-shadow:
+       -0.007em -0.007em 0 var(--text-color),
+        0.007em -0.007em 0 var(--text-color),
+        -0.007em 0.007em 0 var(--text-color),
+         0.007em 0.007em 0 var(--text-color);
+}

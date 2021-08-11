@@ -1,0 +1,41 @@
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    font-family: Consolas, monaco, monospace;
+
+    --text-color: rgb(0,0,0);
+    --trans-text-color: rgba(0,0,0,0.6);
+    --bg-color: rgb(220,220,220);
+
+    &.inverted {
+        --text-color: rgb(255,255,255);
+        --trans-text-color: rgba(255,255,255,0.6);
+        --bg-color: rgb(0,0,0);
+    }
+
+    transition: color 0.125s linear, background-color 0.125s linear;
+}
+
+h1, h2, h3 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a:hover, .toolbar__tool:hover {
+    text-decoration: underline;
+    color: var(--active-link-color);
+}
+
+@import './header';
+@import './detail';

@@ -1,0 +1,15 @@
+.detail {
+    display: flex;
+    position: absolute;
+    margin: 0.5em;
+    bottom: 0;
+    align-items: center;
+}
+
+.detail__text {
+    margin: 0 0.25em;
+}
+
+.detail--github {
+    left: 0;
+}
