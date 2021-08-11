@@ -21,16 +21,6 @@ letterF.addEventListener('click', () => header.classList.toggle('header--font'))
 letterT1.addEventListener('click', () => header.classList.toggle('header--background'));
 letterI.addEventListener('click', () => body.classList.toggle('inverted'));
 
-/*
+// TODO: O face could be animated, rather than just text.
 
-Different letters to each toggle different behaviours.
-
-* switch font (animate in/out)
-* toggle light/dark colors mode
-* "follow the cursor" somehow ... flip when hovered?
-* O becomes a face
-
-
-
-
-*/
+// TODO: per-character animation/cursor following of some sort.

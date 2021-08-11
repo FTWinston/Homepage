@@ -73,3 +73,30 @@
         -0.007em 0.007em 0 var(--text-color),
          0.007em 0.007em 0 var(--text-color);
 }
+
+#face {
+    pointer-events: none;
+    font-weight: bold;
+    position: absolute;
+    bottom: 1.7em;
+    left: 0.65em;
+    display: none;
+    transform: rotate(90deg);
+    transform-origin: 50% 50%;
+    font-family: Consolas, monaco, monospace;
+    font-size: 0.175em;
+    width: 2em;
+    height: 2em;
+}
+
+.header__letter--active.header__letter--o #face {
+    display: initial;
+}
+
+.header--font .header__letter--active.header__letter--o #face {
+    color: var(--bg-color);
+}
+
+.header--font.header--background .header__letter--active.header__letter--o #face {
+    color: black;
+}
