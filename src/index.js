@@ -18,6 +18,7 @@ for (const letter of letters) {
 }
 
 letterF.addEventListener('click', () => header.classList.toggle('header--font'));
+letterT1.addEventListener('click', () => header.classList.toggle('header--background'));
 letterI.addEventListener('click', () => body.classList.toggle('inverted'));
 
 /*

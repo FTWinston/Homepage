@@ -6,6 +6,10 @@
     align-items: center;
 }
 
+.header--background + .detail {
+    color: black;
+}
+
 .detail__text {
     margin: 0 0.25em;
 }

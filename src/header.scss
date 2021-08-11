@@ -8,12 +8,32 @@
 .header {
     font-size: min(45vh, 12vw);
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     font-family: plain;
+}
+
+.header__text {
+    padding: 0 0.2em;
+    border-radius: 0.2em;
 }
 
 .header--font {
     font-family: fancy;
+}
+
+.header--background {
+    background: radial-gradient(circle, var(--grad1-color) 0%, var(--grad2-color) 100%);
+    background-clip: text;
+
+    .header__text {
+        color: white;
+        background-color: black;
+        mix-blend-mode: multiply;
+
+        .header__letter--active {
+            text-decoration-color: var(--lightTrans);
+        }
+    }
 }
 
 .header__letter {
