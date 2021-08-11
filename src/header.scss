@@ -9,6 +9,11 @@
     font-size: min(45vh, 12vw);
     width: 100vw;
     height: 90vh;
+    font-family: plain;
+}
+
+.header--font {
+    font-family: fancy;
 }
 
 .header__letter {
