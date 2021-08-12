@@ -22,6 +22,7 @@ for (const letter of letters) {
 
 letterF.addEventListener('click', () => header.classList.toggle('header--font'));
 letterT1.addEventListener('click', () => header.classList.toggle('header--background'));
+letterW.addEventListener('click', () => text.classList.toggle('header__text--animateLetters'));
 letterI.addEventListener('click', () => body.classList.toggle('inverted'));
 letterT2.addEventListener('click', () => text.classList.toggle('header__text--animate'));
 

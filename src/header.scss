@@ -27,7 +27,7 @@
 }
 
 .header--background {
-    background: radial-gradient(circle, var(--grad1-color) 0%, var(--grad2-color) 100%);
+    background: radial-gradient(circle, var(--fill1-color) 0%, var(--fill2-color) 100%);
     background-clip: text;
 
     .header__text {
@@ -36,7 +36,7 @@
         mix-blend-mode: multiply;
 
         .header__letter--active {
-            text-decoration-color: var(--lightTrans);
+            text-decoration-color: rgb(127,127,127);
         }
     }
 }
@@ -62,12 +62,12 @@
 
     &:focus-visible {
         outline: none;
-        color: red;
+        color: var(--highlight2-color);
     }
 }
 
 .header__letter--active {
-    text-decoration-color: var(--trans-text-color);
+    text-decoration-color: var(--fill1-color);
 }
 
 .header__letter--i:hover, .header__letter--i:active {
@@ -130,10 +130,67 @@
     }
 }
 
+@keyframes pulse {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+  
+    5% {
+        transform: scale3d(1.15, 1.15, 1.15);
+        color: var(--highlight1-color);
+    }
+  
+    10% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
 .header__text--animate {
     animation-name: rubberBand;
     animation-duration: 3s;
     animation-iteration-count: infinite;
+}
+
+.header__text--animateLetters .header__letter {
+    animation-name: pulse;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+    &:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    &:nth-child(2) {
+        animation-delay: 0.333s;
+    }
+
+    &:nth-child(3) {
+        animation-delay: 0.667s;
+    }
+
+    &:nth-child(4) {
+        animation-delay: 1s;
+    }
+
+    &:nth-child(5) {
+        animation-delay: 1.333s;
+    }
+
+    &:nth-child(6) {
+        animation-delay: 1.667s;
+    }
+
+    &:nth-child(7) {
+        animation-delay: 2s;
+    }
+
+    &:nth-child(8) {
+        animation-delay: 2.333s;
+    }
+
+    &:nth-child(9) {
+        animation-delay: 2.667s;
+    }
 }
 
 #face {

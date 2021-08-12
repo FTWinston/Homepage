@@ -28,21 +28,27 @@ body {
     background-color: var(--bg-color);
     font-family: Consolas, monaco, monospace;
 
-    --darkTrans: rgba(0,0,0,0.6);
-    --lightTrans: rgba(255,255,255,0.6);
+    --color1a: rgb(63,94,251);
+    --color1b: rgb(70,202,252);
+    --color2a: rgb(255,0,0);
+    --color2b: rgb(252,249,70);
 
     --text-color: rgb(0,0,0);
     --trans-text-color: var(--darkTrans);
     --bg-color: rgb(220,220,220);
-    --grad1-color: rgb(63,94,251);
-    --grad2-color: rgb(70,202,252);
+    --fill1-color: var(--color1a);
+    --fill2-color: var(--color1b);
+    --highlight1-color: var(--color2a);
+    --highlight2-color: var(--color2b);
 
     &.inverted {
         --text-color: rgb(255,255,255);
         --trans-text-color: var(--lightTrans);
         --bg-color: rgb(0,0,0);
-        --grad1-color: rgb(251,63,88);
-        --grad2-color: rgb(252,249,70);
+        --fill1-color: var(--color2a);
+        --fill2-color: var(--color2b);
+        --highlight1-color: var(--color1a);
+        --highlight2-color: var(--color1b);
     }
 
     transition: color 0.125s linear, background-color 0.125s linear;
