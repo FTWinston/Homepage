@@ -17,6 +17,11 @@
     border-radius: 0.2em;
 }
 
+.header__text--animateIn {
+    animation-name: jackInTheBox;
+    animation-duration: 1.5s;
+}
+
 .header--font {
     font-family: fancy;
 }
@@ -72,6 +77,63 @@
         0.007em -0.007em 0 var(--text-color),
         -0.007em 0.007em 0 var(--text-color),
          0.007em 0.007em 0 var(--text-color);
+}
+
+@keyframes jackInTheBox {
+    from {
+        opacity: 0;
+        transform: scale(0.1) rotate(30deg);
+        transform-origin: center bottom;
+    }
+  
+    50% {
+        transform: rotate(-10deg);
+    }
+  
+    70% {
+        transform: rotate(3deg);
+    }
+  
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes rubberBand {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+  
+    10% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+  
+    13% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+  
+    17% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+  
+    22% {
+         transform: scale3d(0.95, 1.05, 1);
+    }
+  
+    25% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+  
+    33% {
+         transform: scale3d(1, 1, 1);
+    }
+}
+
+.header__text--animate {
+    animation-name: rubberBand;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
 #face {
