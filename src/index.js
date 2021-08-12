@@ -24,8 +24,15 @@ letterF.addEventListener('click', () => header.classList.toggle('header--font'))
 letterT1.addEventListener('click', () => header.classList.toggle('header--background'));
 letterW.addEventListener('click', () => text.classList.toggle('header__text--animateLetters'));
 letterI.addEventListener('click', () => body.classList.toggle('inverted'));
+// TODO: letterN1
+// TODO: letterS
 letterT2.addEventListener('click', () => text.classList.toggle('header__text--animate'));
+// TODO: letterO face could be animated, rather than just text.
+// TODO: letterN2
 
-// TODO: O face could be animated, rather than just text.
-
-// TODO: per-character animation/cursor following of some sort.
+// TODO: combo effect, TWIST
+// TODO: combo effect, TWIT
+// TODO: combo effect, TWINS / TWO / TWIN
+// TODO: combo effect, FIST
+// TODO: combo effect, FTW / WIN / WINS
+// TODO: combo effect, WINSTON sound
