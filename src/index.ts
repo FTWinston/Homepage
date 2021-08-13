@@ -5,16 +5,17 @@ const header = document.querySelector('.header');
 const wrapper = document.querySelector('.header__wrapper');
 const text = document.querySelector('.header__text');
 
-const letters = document.getElementsByClassName('header__letter');
-const letterF = letters[0];
-const letterT1 = letters[1];
-const letterW = letters[2];
-const letterI = letters[3];
-const letterN1 = letters[4];
-const letterS = letters[5];
-const letterT2 = letters[6];
-const letterO = letters[7];
-const letterN2 = letters[8];
+const [
+    letterF,
+    letterT1,
+    letterW,
+    letterI,
+    letterN1,
+    letterS,
+    letterT2,
+    letterO,
+    letterN2,
+] = document.getElementsByClassName('header__letter');
 
 function toggleActive(e: Event) {
     return (e.target as Element).classList.toggle('header__letter--active');
