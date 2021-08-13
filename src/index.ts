@@ -49,7 +49,7 @@ letterN1.addEventListener('click', e => {
 
 letterS.addEventListener('click', e => {
     const active = toggleActive(e);
-    // TODO: something here
+    header.classList.toggle('header--colors', active);
 });
 
 letterT2.addEventListener('click', e => {

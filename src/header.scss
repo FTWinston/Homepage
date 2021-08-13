@@ -33,6 +33,13 @@
     font-family: fancy;
 }
 
+.header--colors {
+    animation-name: colors;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
 .header--background {
     background: radial-gradient(circle, var(--fill1-color) 0%, var(--fill2-color) 100%);
     background-clip: text;
@@ -171,6 +178,16 @@
     
     10% {
         transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes colors {
+    from {
+        filter: hue-rotate(0deg);
+    }
+
+    to {
+        filter: hue-rotate(360deg);
     }
 }
 
