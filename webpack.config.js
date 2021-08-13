@@ -20,6 +20,11 @@ const config = {
   module: {
     rules: [
       {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+      {
         test: /\.s[ac]ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
@@ -28,6 +33,10 @@ const config = {
         ],
       },
     ],
+  },
+  entry: './src/index.ts',
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
 };
 
