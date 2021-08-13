@@ -73,10 +73,65 @@ letterO.addEventListener('click', e => {
     }
 });
 
+let lifeWorker: Worker | undefined;
+let lifeObserver: ResizeObserver | undefined;
+
 letterN2.addEventListener('click', e => {
     const active = toggleActive(e);
-    // TODO: something
-})
+
+    if (active) {
+        const canvas = document.createElement('canvas');
+        canvas.setAttribute('width', header.clientWidth.toString());
+        canvas.setAttribute('height', header.clientHeight.toString());
+        canvas.className = 'header__overlay';
+        header.appendChild(canvas);
+        const context = canvas.getContext('2d');
+
+        lifeObserver = new ResizeObserver(() => {
+            canvas.width = Math.round(canvas.parentElement.clientWidth);
+            canvas.height = Math.round(canvas.parentElement.clientHeight);
+        });
+        lifeObserver.observe(header);
+
+        lifeWorker = new Worker(new URL('./lifeWorker.ts', import.meta.url));
+        lifeWorker.onmessage = e => {
+            const { w, h, d } = e.data
+            drawLife(context, w, h, d);
+        };
+
+        //lifeWorker.postMessage('MESSAGE'); // TODO: send initial state?
+    }
+    else {
+        lifeObserver.disconnect();
+        header.lastChild.remove();
+        lifeWorker.terminate();
+    }
+});
+
+let testX = 0;
+
+function drawLife(
+    ctx: CanvasRenderingContext2D,
+    dataCols: number,
+    dataRows: number,
+    dataVals: Uint8Array
+) {
+    const cellWidth = ctx.canvas.width / dataCols;
+    const cellHeight = ctx.canvas.height / dataRows;
+    const cellSize = Math.max(cellWidth, cellHeight);
+
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    ctx.globalAlpha = 0.3;
+    ctx.fillStyle = window.getComputedStyle(ctx.canvas, null).getPropertyValue('color');
+
+    for (let x = 0; x < dataCols; x++) {
+        for (let y = 0; y < dataRows; y++) {
+            if (dataVals[x + y * dataCols] === 1) {
+                ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+            }
+        }
+    }
+}
 
 // TODO: combo effect, TWIST
 // TODO: combo effect, TWIT

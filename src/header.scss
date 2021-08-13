@@ -6,6 +6,7 @@
 }
 
 .header {
+    position: relative;
     font-size: min(45vh, 12vw);
     width: 100vw;
     height: 100vh;
@@ -332,4 +333,13 @@
 
 .header--font.header--background .pupil {
     background-color: black;
+}
+
+.header__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
 }
