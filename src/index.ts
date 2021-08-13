@@ -1,3 +1,4 @@
+import { lifeCellsHigh, lifeCellsWide } from './constants';
 import './style.scss';
 
 const body = document.querySelector('body');
@@ -99,7 +100,17 @@ letterN2.addEventListener('click', e => {
             drawLife(context, w, h, d);
         };
 
-        //lifeWorker.postMessage('MESSAGE'); // TODO: send initial state?
+        // On click, send the clicked cell so it can be set as "alive" in the simulation.
+        canvas.addEventListener('click', e => {
+            const cellWidth = canvas.width / lifeCellsWide;
+            const cellHeight = canvas.height / lifeCellsHigh;
+            const cellSize = Math.max(cellWidth, cellHeight);
+
+            lifeWorker.postMessage({
+                x: Math.round(e.clientX / cellSize - 0.5),
+                y: Math.round(e.clientY / cellSize - 0.5),
+            })
+        });
     }
     else {
         lifeObserver.disconnect();

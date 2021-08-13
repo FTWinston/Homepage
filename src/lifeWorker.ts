@@ -1,9 +1,11 @@
+import { lifeCellsHigh, lifeCellsWide } from './constants';
+
 function randomInt(max: number) {
     return Math.floor(Math.random() * max);
 }
 
-const width = 30;
-const height = 30;
+const width = lifeCellsWide;
+const height = lifeCellsHigh;
 
 const worker = self as any;
 
@@ -58,3 +60,11 @@ setInterval(() => {
         d: outputArray
     }, [outputArray.buffer]);
 }, 200);
+
+onmessage = e => {
+    const { x, y } = e.data;
+
+    stateArray[x + width * y] = 1;
+    stateArray[x + width * y - 1] = 1;
+    stateArray[x + width * y + 1] = 1;
+}
