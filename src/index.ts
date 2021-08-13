@@ -1,5 +1,4 @@
 import './style.scss';
-import { drawFace } from './drawFace';
 
 const body = document.querySelector('body');
 const header = document.querySelector('.header');
@@ -62,12 +61,11 @@ letterO.addEventListener('click', e => {
     
     if (active) {
         const wrapper = document.createElement('div'); 
+        wrapper.className = 'eye';
         letterO.appendChild(wrapper);
-        const canvas = document.createElement('canvas');
-        canvas.setAttribute('width', '200');
-        canvas.setAttribute('height', '200');
-        wrapper.appendChild(canvas);
-        drawFace(canvas.getContext('2d'));
+        const pupil = document.createElement('div');
+        pupil.className = 'pupil';
+        wrapper.appendChild(pupil);
     } else {
         letterO.lastChild.remove();
     }

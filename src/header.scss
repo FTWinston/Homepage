@@ -193,29 +193,74 @@
     }
 }
 
-#face {
-    pointer-events: none;
-    font-weight: bold;
+.header__letter--o {
+    position: relative;
+}
+
+.eye {
     position: absolute;
-    bottom: 1.7em;
-    left: 0.65em;
-    display: none;
+    pointer-events: none;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pupil {
+    position: relative;
+    top: 0.7em;
     transform: rotate(90deg);
     transform-origin: 50% 50%;
-    font-family: Consolas, monaco, monospace;
     font-size: 0.175em;
-    width: 2em;
-    height: 2em;
+    width: 1em;
+    height: 1em;
+    border-radius: 1em;
+    background-color: var(--text-color);
+    animation-name: eye;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
-.header__letter--active.header__letter--o #face {
-    display: initial;
+.header--font .pupil {
+    top: 1.3em;
+    background-color: var(--bg-color);
 }
 
-.header--font .header__letter--active.header__letter--o #face {
-    color: var(--bg-color);
+@keyframes eye {
+    15% {
+        transform: translate(0, 0);
+    }
+    
+    30% {
+        transform: translate(-20%, 0);
+    }
+    
+    60% {
+        transform: translate(20%, 0);
+    }
+
+    75% {
+        transform: translate(0, 0);
+    }
+
+    89% {
+        transform: scale(1, 1);
+    }
+
+    90% {
+        transform: scale(1, 0);
+    }
+
+    91% {
+        transform: scale(1, 1);
+    }
 }
 
-.header--font.header--background .header__letter--active.header__letter--o #face {
-    color: black;
+.header--background .pupil {
+    background-color: white;
+}
+
+.header--font.header--background .pupil {
+    background-color: black;
 }
