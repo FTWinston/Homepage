@@ -12,6 +12,13 @@
     font-family: plain;
 }
 
+.header__wrapper--animate {
+    animation-name: spin;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
 .header__text {
     padding: 0 0.2em;
     border-radius: 0.2em;
@@ -97,6 +104,28 @@
     to {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate3d(0,1,0,0);
+    }
+    
+    25% {
+        transform: rotate3d(0.05,1,0,90deg);
+    }
+
+    50% {
+        transform: rotate3d(0,1,0,180deg);
+    }
+    
+    75% {
+        transform: rotate3d(0.05,1,0,270deg);
+    }
+
+    to {
+        transform: rotate3d(0,1,0,360deg);
     }
 }
 

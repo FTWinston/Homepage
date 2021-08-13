@@ -2,6 +2,7 @@ import './style.scss';
 
 const body = document.querySelector('body');
 const header = document.querySelector('.header');
+const wrapper = document.querySelector('.header__wrapper');
 const text = document.querySelector('.header__text');
 
 const letters = document.getElementsByClassName('header__letter');
@@ -43,7 +44,7 @@ letterI.addEventListener('click', e => {
 
 letterN1.addEventListener('click', e => {
     const active = toggleActive(e);
-    // TODO: something here
+    wrapper.classList.toggle('header__wrapper--animate', active);
 });
 
 letterS.addEventListener('click', e => {
