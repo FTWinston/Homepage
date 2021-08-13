@@ -195,6 +195,13 @@
 
 .header__letter--o {
     position: relative;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    transform-origin: center 60%;
+}
+
+.header--font .header__letter--o {
+    transform-origin: center 65%;
 }
 
 .eye {
@@ -216,10 +223,14 @@
     height: 1em;
     border-radius: 1em;
     background-color: var(--text-color);
-    animation-name: eye;
+    animation-name: pupil;
     animation-duration: 9s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+}
+
+.header__letter--o.header__letter--active {
+    animation-name: eye;
 }
 
 .header--font .pupil {
@@ -227,7 +238,7 @@
     background-color: var(--bg-color);
 }
 
-@keyframes eye {
+@keyframes pupil {
     15% {
         transform: translate(0, 0);
     }
@@ -243,9 +254,16 @@
     75% {
         transform: translate(0, 0);
     }
+}
+
+@keyframes eye {
+    88% {
+        text-decoration-line: underline;
+    }
 
     89% {
         transform: scale(1, 1);
+        text-decoration-line: none;
     }
 
     90% {
@@ -254,6 +272,11 @@
 
     91% {
         transform: scale(1, 1);
+        text-decoration-line: none;
+    }
+
+    92% {
+        text-decoration-line: underline;
     }
 }
 
