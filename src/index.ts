@@ -109,7 +109,19 @@ letterN2.addEventListener('click', e => {
             lifeWorker.postMessage({
                 x: Math.round(e.clientX / cellSize - 0.5),
                 y: Math.round(e.clientY / cellSize - 0.5),
-            })
+            });
+
+            const behind = document.elementsFromPoint(e.clientX, e.clientY)[1];
+
+            if (behind) {
+                behind.dispatchEvent(new MouseEvent('click', {
+                    'view': window,
+                    'bubbles': true,
+                    'cancelable': true,
+                    'screenX': e.screenX,
+                    'screenY': e.screenY
+                }));
+            }
         });
     }
     else {
